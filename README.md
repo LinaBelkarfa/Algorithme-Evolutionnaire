@@ -20,18 +20,12 @@ On adapte un algorithme génétique simple à un problème assez complexe tel qu
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-Le projet présenté est un projet de Data Mining, à partir duquel nous essayons de construire un modèle capable de prédire les défauts de remboursement de prêt bancaire des clients.
+Ce problème a été démontré être NP-complet, même si il peut être résolu en temps pseudopolynomial par programmation dynamique.
+Nous essayons donc par cet algorithme de trouver une solution qui sur de grands ensembles s'avère plus performant. 
 
 ### Problem
 
-* Le problème de la partition, en tant que problème de décision, peut être énoncé comme suit : étant donné un ensemble ni A et une taille t(a) appartenant à N \ 0 pour chaque a de A, existe-t-il un sous-ensemble A' issu de A tel que :
+* Le problème de la partition, en tant que problème de décision, peut être énoncé comme suit : étant donné un ensemble fini A et une taille t(a) appartenant à N \ 0 pour chaque a de A, existe-t-il un sous-ensemble A' issu de A tel que :
 
-$\sum_{a$\in$A}t_(a)$
+![Screenshot](partition.JPG)
 
-* [library : rpart]
-* [library : tree]
-* [library : C50]
-* [library : randomForest]
-* [library : kknn]
-* [library : svm]
-* [library : naivebayes]
