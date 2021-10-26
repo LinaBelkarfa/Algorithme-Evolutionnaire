@@ -12,6 +12,9 @@ On adapte un algorithme génétique simple à un problème assez complexe tel qu
       <ul>
         <li><a href="#problem">Problem</a></li>
       </ul>
+      <ul>
+        <li><a href="#output">Output</a></li>
+      </ul>
     </li>
   </ol>
 </details>
@@ -29,3 +32,6 @@ Nous essayons donc par cet algorithme de trouver une solution qui sur de grands 
 
 ![Screenshot](partition.JPG)
 
+### Output
+* Prenons l'Output suivant et analysons le : 
+![Screenshot](algo.JPG)
