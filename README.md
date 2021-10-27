@@ -33,11 +33,12 @@ Nous essayons donc par cet algorithme de trouver une solution qui sur de grands 
 
 * Le problème de la partition, en tant que problème de décision, peut être énoncé comme suit : étant donné un ensemble fini A et une taille t(a) appartenant à N \ 0 pour chaque a de A, existe-t-il un sous-ensemble A' issu de A tel que :
 
-![Screenshot](partition.JPG)
+         ![Screenshot](partition.JPG)
 
 ### Output
 * Prenons l'Output suivant et analysons le : 
-![Screenshot](algo.JPG)
+ 
+         ![Screenshot](algo.JPG)
 
 * Nous avons tout d'abord l'ensemble A qui a été défini de manière aléatoire (sa taille et ses valeurs sont tirées aléatoirement)
 * La fitness atteinte correspond à celle de l'individu juste en dessous (dans notre problème, la fitness max possible est 1)
