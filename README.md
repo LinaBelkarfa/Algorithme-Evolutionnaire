@@ -64,3 +64,5 @@ sum(A \ A') = 16
 * A la fin de la génération i, on applique la mutation et la recombinaison des génomes pour tester de nouvelles combinaisons (créer de nouveaux individus, faire de la reproduction)
 * On génère une nouvelle génération tant qu'on a pas atteint une fitness de 1 pour un individu de la génération i
 * Si on atteind pas une fitness de 1, on s'arrête à la génération MAXGEN, qui est le nombre max de génération à tester.
+* On renvoie dans ce cas là, la fitness max de l'individu de la dernière génération
+* On pourrait donc améliorer l'algorithme en stockant l'individu ayant eu la meilleure fitness dans les générations précédentes, au cas où on ne trouve pas de solution optimale.
