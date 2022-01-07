@@ -10,13 +10,13 @@ On adapte un algorithme génétique simple à un problème assez complexe tel qu
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#problem">Problem</a></li>
+        <li><a href="#introduction">Introduction</a></li>
       </ul>
       <ul>
-        <li><a href="#output">Output</a></li>
+        <li><a href="#neuroevolution-of-augmenting-topologies"> Neuroevolution </a></li>
       </ul>
        <ul>
-        <li><a href="#details">Details</a></li>
+        <li><a href="#results">Results</a></li>
       </ul>
     </li>
   </ol>
@@ -25,45 +25,32 @@ On adapte un algorithme génétique simple à un problème assez complexe tel qu
 
 
 <!-- ABOUT THE PROJECT -->
+# Algorithmes Évolutionnaires — Travaux dirigés N◦6 : neuroévolution
 ## About The Project
-Ce problème a été démontré être NP-complet, même si il peut être résolu en temps pseudopolynomial par programmation dynamique.
-Nous essayons donc par cet algorithme de trouver une solution qui sur de grands ensembles s'avère plus performant. 
+Dans cette séance, nous allons développer un algorithme évolutionnaire du type NEAT pour optimiser un réseau de neurones. Pour ce faire, nous utiliserons les frameworks DEAP et Keras.
 
-### Problem
+### Introduction
+Pour appliquer **les algorithmes évolutionnaires aux réseaux de neurones**, il y a deux possibilités : soit on code soi-même les primitives du réseau de neurones, soit on s’appuye sur un frameworks, comme **Keras**, qui fournit toutes ces primitives et plein de choses en plus. 
+Dans les deux cas, il y a des avantages et des inconvénients : 
+* si on décide de coder soi-même, il faudra investir du temps dans le développement, mais on aura un contrôle et une compréhension parfaite sur le code produit ; 
+* si on opte pour un framework, il faudra investir du temps pour apprendre à l’utiliser, mais on aura accès à tout ce qu’il y a de plus récent et performant en matière d’apprentissage profond
 
-* Le problème de la partition, en tant que problème de décision, peut être énoncé comme suit : étant donné un ensemble fini A et une taille t(a) appartenant à N \ 0 pour chaque a de A, existe-t-il un sous-ensemble A' issu de A tel que :
+-------------------------------------------------------------- 
 
+class = Variable de classe (1:test positif pour le diabète, 0 : test négatif pour le diabète)
+
+### NeuroEvolution of Augmenting Topologies
+- Démarrer avec des topologies aléatoires minimales.
+- Augmenter les topologies au fur et à mesure si nécessaire.
+- Suivez les gènes correspondants pour atténuer le problème des conventions concurrentes.
+- Protéger les innovations par la spéciation.
+
+**La fonction de fitness** sera basée sur la **fonction de perte** du réseau de neurones.
+Une fonction de perte, ou **Loss function**, est une fonction qui **évalue l’écart entre les prédictions réalisées par le réseau de neurones et les valeurs réelles des observations utilisées pendant l’apprentissage**. Plus le résultat de cette fonction **est minimisé**, plus le réseau de neurones **est performant**. Sa minimisation, c’est-à-dire réduire au minimum l’écart entre la valeur prédite et la valeur réelle pour une observation donnée, se fait en ajustant les différents poids du réseau de neurones.
+
+
+### Results
+* Prenons l'Output du premier algorithme contenu dans AE_TP7_test.ipynb : 
 ![Screenshot](Capture.PNG)
-
-### Output
-* Prenons l'Output suivant et analysons le : 
- 
-![Screenshot](algo.JPG)
-
-* Nous avons tout d'abord l'ensemble A qui a été défini de manière aléatoire (sa taille et ses valeurs sont tirées aléatoirement)
-* La fitness atteinte correspond à celle de l'individu juste en dessous (dans notre problème, la fitness max possible est 1)
-* Le génome de l'individu représente la solution trouvé. Les 1 définisse les valeurs de A' piochée dans A, à la position correspondante et les 0 les valeurs qui seront dans A privé de A'
-* La solutions de partitionnement de A en A' et A \ A' est donc renvoyée ensuite. 
-
-### Details
-
-* Dans un premier temps, l'algorithme génère A de façon aléatoire (taille aléatoire de A = N = longueur d'un génome de la population)
-* Ensuite, il génère une population "pop" de taille POPSIZE (nombre d'individus fixé au début), et dont chaque individu a un génome de taille N (soit len(A)), on obtient donc notre population de dimansion N x POPSIZE
-* L'algorithme va séparer A en fonction du génôme chaque individus et faire la somme des éléments de chaque sous ensemble 
-* sum(A') = sum(A x pop[i])  &  sum(A \ A') = sum(A - A')
-Exemple : 
-A      = 1 2 3 4 5 6
-pop(i) = 0 1 1 0 0 0
-Alors:
-A'     = 0 2 3 0 0 0
-A \ A' = 1 0 0 4 5 6
-Et:
-sum(A')= 5
-sum(A \ A') = 16
-* Enfin, l'algorithme fait la différence entre ces deux valeurs, et l'utilise pour calculer la fitness (fitness = 1/(1+z(ind), z(ind) étant la différence entre les poids des deux sous ensembles)
-* On test tous les individus de la population tant qu'on a pas une fitness égale à 1
-* A la fin de la génération i, on applique la mutation et la recombinaison des génomes pour tester de nouvelles combinaisons (créer de nouveaux individus, faire de la reproduction)
-* On génère une nouvelle génération tant qu'on a pas atteint une fitness de 1 pour un individu de la génération i
-* Si on atteind pas une fitness de 1, on s'arrête à la génération MAXGEN, qui est le nombre max de génération à tester.
-* On renvoie dans ce cas là, la fitness max de l'individu de la dernière génération
-* On pourrait donc améliorer l'algorithme en stockant l'individu ayant eu la meilleure fitness dans les générations précédentes, au cas où on ne trouve pas de solution optimale.
+* Prenons l'Output du second algorithme contenu dans AE_TP7_finale.ipynb : 
+![Screenshot](Capture2.PNG)
