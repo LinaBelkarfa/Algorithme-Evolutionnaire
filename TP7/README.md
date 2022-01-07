@@ -1,8 +1,9 @@
 # Algorithme-Evolutionnaire
 Création d'un algorithme évolutionnaire pour le partionnement d'un ensemble en deux sous emsembles de même somme.
-
-On adapte un algorithme génétique simple à un problème assez complexe tel que le MaxOne, c'est à dire, le problème de la partition, qui est un problème NP-Complet.
-
+* AE_TP7_test.ipynb est un fichier détaillé des tests et recherches faites dans un premier temps. Il y a donc un premier algorithme (un peu brouillon) mais fonctionnel.
+* AE_TP7_Finale.ipynb contient quant à lui l'algorithme final avec de meilleurs résultats. 
+* Les deux fichiers étant des Jupyter Notebook, le détail et les commentaires s'y trouvent. 
+* 
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
