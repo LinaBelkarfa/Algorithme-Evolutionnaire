@@ -1,9 +1,9 @@
 # Algorithme-Evolutionnaire
 Création d'un algorithme évolutionnaire pour le partionnement d'un ensemble en deux sous emsembles de même somme.
-* AE_TP7_test.ipynb est un fichier détaillé des tests et recherches faites dans un premier temps. Il y a donc un premier algorithme (un peu brouillon) mais fonctionnel.
-* AE_TP7_Finale.ipynb contient quant à lui l'algorithme final avec de meilleurs résultats. 
+* **AE_TP7_test.ipynb** est un fichier détaillé des tests et recherches faites dans un premier temps. Il y a donc un premier algorithme (un peu brouillon) mais fonctionnel.
+* **AE_TP7_Finale.ipynb** contient quant à lui l'algorithme final avec de meilleurs résultats. 
 * Les deux fichiers étant des Jupyter Notebook, le détail et les commentaires s'y trouvent. 
-* 
+
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
